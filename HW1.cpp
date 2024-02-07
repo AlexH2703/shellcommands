@@ -25,7 +25,7 @@ int main() {
 			
 		}
 		else if (input == 4) {
-			int returnCode = system("echo Hello, World!");
+			int returnCode = system("echo Hello, World!");			//Echo the given text
 			if (returnCode == 0) {
 				cout << "Command executed successfully." << endl;
 			}
@@ -36,11 +36,11 @@ int main() {
 			}
 		}
 		else if (input == 5) {
-			const char* fileName = "testing.txt";  
+			const char* fileName = "testing.txt";  							//grabs the file name
 			char command[100];									//sets the size of the file
-			sprintf_s(command, "type %s", fileName);
+			sprintf_s(command, "type %s", fileName);						//prints the text from the file using the type shell command
 
-			int typeResult = system(command);
+			int typeResult = system(command);							
 			if (typeResult != 0) {
 				// Handle error, print an error message or exit the program
 				return 1;
